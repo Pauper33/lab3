@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <script>
+            let ferma = function() {
+                let n = document.getElementById("n").value;
+                var result = document.getElementById("result");
+    
+                const s = Math.round(Math.sqrt(n));
+                let a, b;
+    
+                let isInteger = (num) => {
+                    return (num ^ 0) === num ? true : false; 
+                }
+
+                if(n % 2 === 0){
+                    result.innerHTML = n + " = 2 * " + n / 2;
+                } else if (Math.sqrt(n) === s) {
+                    result.innerHTML = n + " = " + s + " * " + s;
+                } else {
+                    let y;
+                    let i;
+                    for (i = 1; isInteger(y) === false; i++) {
+                        y = Math.sqrt(Math.pow((s + i), 2) - n);
+                    };
+                    i -= 1
+                    a = s + i - y;
+                    b = s + i + y;
+                    result.innerHTML = n + " = " + a + " * " + b;
+                };
+            } 
+        </script>
+    </head>
+    <body>
+        <div id="app">
+            <p><input type="number" id="n"></p>
+            <p><input type="button" value="Проверить" onclick="ferma()"></p>
+            <div id="result"></div>
+        </div>
+    </body>
+</html>
