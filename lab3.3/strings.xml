@@ -1,0 +1,11 @@
+<resources>
+    <string name="name">Шкурко ИП-73</string>
+    <string name="a">а</string>
+    <string name="b">b</string>
+    <string name="c">c</string>
+    <string name="d">d</string>
+    <string name="y">y</string>
+    <string name="mutation">шанс мутации</string>
+    <string name="button">раcчёт</string>
+    <string name="result">ax1 + bx2 + cx3 + dx4 = y</string>
+</resources>
