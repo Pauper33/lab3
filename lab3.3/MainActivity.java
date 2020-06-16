@@ -71,6 +71,7 @@ public class MainActivity extends AppCompatActivity {
     private String geneticAlgorithm() {
         Random rand = new Random();
         int size = 5;
+        int counter = 0;
         ArrayList<ArrayList<Integer>> population = new ArrayList<>();
 
         //заполнение первой популяции
@@ -87,6 +88,12 @@ public class MainActivity extends AppCompatActivity {
             double sumDeltas = 0;
             int[] deltas = new int[size];
 
+            if (counter == 10)
+            {
+                return "10 iterations passed";
+            }
+
+            counter++;
             //расчет дельты для всех генотипов
             for (int i = 0; i < size; i++) {
                 deltas[i] = fitness(population.get(i));
